@@ -1,0 +1,69 @@
+body {
+  background-image: url("./images/sky_bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 97vh;
+}
+
+#content {
+  position: fixed;
+  top: 40vh;
+  left: 33%;
+}
+
+.display {
+  font-size: 30px;
+  color: rgb(255, 217, 0);
+  background: rgba(0, 0, 0, 0.336);
+  position: relative;
+  width: max-content;
+}
+
+#location::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(#e66465, #9198e5);
+  left: 0;
+  bottom: 0;
+}
+
+#location {
+  position: relative;
+  width: 500px;
+  height: 30px;
+  border-radius: 3%;
+  left: 90px;
+}
+
+#searchWeather {
+  position: relative;
+  width: 70px;
+  height: 35px;
+  left: 15px;
+  border-radius: 2%;
+  cursor: pointer;
+  z-index: 0;
+}
+
+#searchWeather::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(#9198e5, #e66465);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 150ms ease-in-out;
+}
+
+#searchWeather:hover::after {
+  width: 100%;
+}
+
+#searchWeather:hover {
+  color: rgb(255, 255, 255);
+}
